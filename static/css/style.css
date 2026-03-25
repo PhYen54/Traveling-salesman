@@ -89,3 +89,16 @@ body, html { height: 100%; overflow: hidden; background-color: #e5e3df; }
 }
 
 .btn-optimize:hover { background-color: #1557b0; }
+/* Style cho nhãn tên địa điểm trên bản đồ */
+.custom-tooltip {
+    background-color: white;
+    border: 2px solid #1a73e8; /* Viền xanh đồng bộ */
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    font-size: 12px;
+    font-weight: bold;
+    color: #333;
+    padding: 2px 6px;
+}
+/* Ẩn cái mũi tên tam giác mặc định của Leaflet cho đỡ vướng */
+.leaflet-tooltip-top:before { border-top-color: transparent; }
