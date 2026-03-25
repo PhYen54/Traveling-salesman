@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tối Ưu Lịch Trình (TSP)</title>
+    <link rel="stylesheet" href="../static/css/style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    
+</head>
+<body>
+
+    <div id="map"></div>
+
+    <div id="search-container" class="floating-panel">
+        <input type="text" id="search-input" placeholder="Nhập địa điểm muốn đến (vd: Chợ Bến Thành)">
+        
+        </div>
+
+    <div id="itinerary-card" class="floating-panel">
+        <h3>Lịch trình chuyến đi</h3>
+        <ul id="location-list">
+            <li style="color: #aaa; border: none; justify-content: center;">Chưa có địa điểm nào được chọn.</li>
+            </ul>
+        <button class="btn-optimize">TỐI ƯU LỊCH TRÌNH</button>
+    </div>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="../static/javascripts/map.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,91 @@
+/* Reset CSS cơ bản */
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+
+/* Ẩn thanh cuộn của trình duyệt vì bản đồ sẽ chiếm trọn màn hình */
+body, html { height: 100%; overflow: hidden; background-color: #e5e3df; }
+
+/* KHỐI 1: Lớp nền vô cực cho Bản đồ */
+#map {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    z-index: 0; /* Nằm dưới cùng */
+}
+
+/* Class dùng chung cho các khối lơ lửng */
+.floating-panel {
+    position: absolute;
+    z-index: 1000; /* Nổi lên trên mặt bản đồ */
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2); /* Hiệu ứng đổ bóng chuẩn Google */
+    padding: 15px;
+}
+
+/* KHỐI 2: Thanh tìm kiếm */
+#search-container {
+    top: 20px; 
+    left: 20px;
+    width: 400px;
+    height: 50px;
+    border-radius: 15px;
+}
+
+#search-input {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    padding: 0px 0;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.3s;
+}
+
+#search-input:focus {
+    border-bottom: 2px solid #1a73e8; /* Hiệu ứng gạch dưới màu xanh khi gõ */
+}
+
+
+/* KHỐI 3: Thẻ Lịch trình */
+#itinerary-card {
+    bottom: 30px; 
+    left: 20px;
+    width: 350px;
+    max-height: 50vh; /* Không cao quá nửa màn hình */
+    display: flex;
+    flex-direction: column;
+}
+
+#itinerary-card h3 { font-size: 16px; color: #333; margin-bottom: 15px; }
+
+#location-list {
+    list-style: none;
+    overflow-y: auto; /* Cho phép cuộn nếu danh sách quá dài */
+    margin-bottom: 15px;
+    flex-grow: 1;
+}
+
+#location-list li {
+    padding: 10px 0;
+    border-bottom: 1px dashed #eee;
+    font-size: 14px;
+    color: #555;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Nút Tối ưu quyền lực */
+.btn-optimize {
+    width: 100%;
+    padding: 12px;
+    background-color: #1a73e8; /* Xanh chuẩn Google */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-optimize:hover { background-color: #1557b0; }
